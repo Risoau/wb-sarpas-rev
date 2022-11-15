@@ -1,0 +1,267 @@
+* 
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    scroll-behavior: smooth
+    
+html 
+    max-width: 100%
+    overflow-x: hidden
+
+body 
+    max-width: 100%
+    height: fit-content
+    margin: 0
+    background-color: #f5f5f5
+
+header
+    width: 80px
+    position: fixed
+    height: 100%
+    cursor: default
+    display: flex
+    align-items: center
+    background-color: rgba( 152, 158, 179, 0.05 )
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )
+    backdrop-filter: blur( 15px )
+    -webkit-backdrop-filter: blur( 15px )
+    border: 1px solid rgba( 255, 255, 255, 0.18 )
+    z-index: 100
+
+    .main-nav
+        width: 100%
+        position: relative
+        box-sizing: border-box
+        list-style: none
+        height: 100%
+        padding: 15px 10px
+        display: flex
+        flex-direction: column
+        align-items: center
+        row-gap: 10px
+        z-index: 150
+
+        .header-profile
+            position: absolute
+            bottom: 15px
+            width: 45px
+            height: 45px
+            overflow: hidden
+            border-radius: 50%
+            border: 1px solid rgba( 255, 255, 255, 0.18 )
+            
+            img
+                width: 100%
+                height: auto
+
+        li
+            width: 50px
+            height: 50px
+            display: flex
+            align-items: center
+            justify-content: center
+            cursor: pointer
+            outline: none
+            border-radius: 5px
+            border: 0.05px solid rgba( 152, 158, 179, 0 )
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0 )
+            transition: 300ms
+
+            .material-symbols-outlined
+                color: rgba(0, 0, 0, 0.5)
+
+        .list:hover
+            background: rgba( 255, 255, 255, 0.52 )
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )
+            backdrop-filter: blur( 15px )
+            -webkit-backdrop-filter: blur( 15px )
+            border-radius: 10px
+            border: 1px solid rgba( 255, 255, 255, 0.18 )
+
+            .material-symbols-outlined
+                color: rgba(0, 0, 0, 1)
+                        
+        .list:active
+            background: rgba( 255, 255, 255, 0.52 )
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )
+            backdrop-filter: blur( 15px )
+            -webkit-backdrop-filter: blur( 15px )
+            border-radius: 50%
+            border: 1px solid rgba( 255, 255, 255, 0.18 )
+
+            .material-symbols-outlined
+                color: rgba(0, 0, 0, 1)
+
+.pop-up
+    position: fixed
+    width: 300px
+    height: fit-content
+    top: 18%
+    right: 24px
+    background-color: rgba( 152, 158, 179, 0.05 )
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 )
+    backdrop-filter: blur( 15px )
+    -webkit-backdrop-filter: blur( 15px )
+    border-radius: 10px
+    border: 1px solid rgba( 255, 255, 255, 0.18 )
+    z-index: 100
+
+    ul
+        list-style: none
+        width: 100%
+        height: 100%
+        padding: 10px 0
+
+        li
+            width: 100%
+            height: 48px
+            padding: 0 20px
+            display: flex
+            flex-direction: row
+            align-items: center
+            column-gap: 20px
+            cursor: pointer
+            transition: 300ms
+
+            p
+                font-family: 'Montserrat'
+                letter-spacing: 1px
+
+        li:hover
+            background: rgba( 255, 255, 255, 0.52 )
+
+main 
+    position: absolute
+    width: 1700px
+    height: 2140px
+    top: 0
+    right: 50px
+    padding-top: 40px
+
+    .present 
+        box-sizing: border-box
+        width: 100%
+        height: 48px
+        display: flex
+        align-items: center
+        cursor: default
+        border-bottom: 1px solid rgba(0, 0, 0, 1)
+
+        #present-say-text 
+            font-size: 18px
+            font-family: 'Montserrat'
+            letter-spacing: 1px
+            font-weight: 600
+            margin-right: 5px
+            text-transform: capitalize
+
+        #present-user-name 
+            font-size: 18px
+            font-family: 'Montserrat'
+            letter-spacing: 1px
+            font-weight: 600  
+            text-transform: capitalize
+    
+    .container
+        position: relative
+        box-sizing: border-box
+        width: 100%
+        height: fit-content
+        margin-top: 20px
+        border-radius: 15px
+        background-color: #fff
+        
+        .title-table
+            position: relative
+            width: 100%
+            height: 52px
+            padding: 20px
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            cursor: default
+            border-top-left-radius: 10px
+            border-top-right-radius: 10px
+            
+            p
+                font-size: 16px
+                font-family: 'Montserrat'
+                letter-spacing: 1px
+                font-weight: 600
+                color: #fff
+                letter-spacing: 2.5px
+                text-transform: capitalize
+
+            button
+                width: 30px
+                height: 30px
+                border-radius: 50%
+                border: none
+                outline: none
+                background: none
+
+                span
+                    color: #fff
+                    font-weight: 600
+
+        .data-table
+            box-sizing: border-box
+            width: 100%
+            height: fit-content
+            padding: 20px 20px 50px 20px
+            border-bottom-left-radius: 10px
+            border-bottom-right-radius: 10px
+
+            table 
+                width: 100%
+                height: fit-content
+                border-collapse: collapse
+                border: 1px solid rgba(0, 0, 0, 0.1)
+                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.16 )
+
+                thead
+                    td
+                        height: 40px
+                        text-align: center
+                        font-size: 14px
+                        color: #fff
+                        font-family: 'Montserrat'
+                        letter-spacing: 1.5px
+                        text-transform: capitalize
+                        font-weight: 600
+
+                tbody
+                    td
+                        height: 40px
+                        text-align: center
+                        font-size: 14px
+                        color: #000
+                        font-family: 'Montserrat'
+                        letter-spacing: 1.5px
+                        text-transform: capitalize
+                        font-weight: 500
+                        background-color: #fff
+
+    .c1 
+        .title-table
+            background-color: hsla(248, 72%, 65%, 0.74)
+
+        .data-table
+            table
+                thead
+                    background-color: #3B44F6
+                    opacity: 0.5
+
+    .c2
+        margin-top: 64px
+        
+        .title-table
+            background-color: rgba(33, 146, 255, 0.74)
+
+        .data-table
+            table
+                thead
+                    background-color: #2FA4FF
+                    opacity: 0.5
+                        
